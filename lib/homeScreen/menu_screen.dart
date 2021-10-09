@@ -3,6 +3,9 @@ import '../crossAppUtilities/constants.dart';
 import 'menu_select_button.dart';
 
 class MenuScreen extends StatelessWidget {
+
+  static const String pageID = 'menu_screen';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
