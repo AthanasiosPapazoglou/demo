@@ -24,7 +24,7 @@ class MenuScreen extends StatelessWidget {
                 right: 60,
               ),
               child: Image(
-                image: AssetImage('lib/homeScreen/images/logo.png'),
+                image: AssetImage('images/logo.png'),
               ),
             ),
             MenuSelectionButton(

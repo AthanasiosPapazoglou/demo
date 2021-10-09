@@ -1,4 +1,6 @@
+import 'package:demo/item_model.dart';
 import 'package:flutter/material.dart';
+import 'item_model.dart';
 
 class MeatScreen extends StatelessWidget {
   
@@ -9,12 +11,7 @@ class MeatScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-        child: Container(
-          child: Text(
-            'Welcome to meat menu',
-            style: TextStyle(fontSize: 50,
-            color: Colors.green),),
-        ),
+        child: ItemModel(),
       ),
     );
   }
