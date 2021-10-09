@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import '../crossAppUtilities/constants.dart';
 import 'menu_select_button.dart';
+import 'package:demo/meat_screen.dart';
+import 'package:demo/vegeterian_screen.dart';
+import 'package:demo/vegan_screen.dart';
 
 class MenuScreen extends StatelessWidget {
 
@@ -29,18 +32,21 @@ class MenuScreen extends StatelessWidget {
               providedIcon: Icons.fastfood_rounded,
               iconColor: Colors.brown,
               cardColor: Colors.brown.shade100,
+              pageID: MeatScreen.pageID,
             ),
             MenuSelectionButton(
               buttonText: 'Vegeterian Menu ',
               providedIcon: Icons.favorite_rounded,
               iconColor: Colors.red,
               cardColor: Colors.red.shade100,
+              pageID: VegeterianScreen.pageID,
             ),
             MenuSelectionButton(
               buttonText: 'Vegan Menu ',
               providedIcon: Icons.local_florist_outlined,
               iconColor: Colors.green,
               cardColor: Colors.green.shade100,
+              pageID: VeganScreen.pageID,
             ),
           ],
         ),
