@@ -12,12 +12,8 @@ class menuListView extends StatelessWidget {
     return ListView.builder(
       itemCount: Recipes.length,
       itemBuilder: (context, index){
-        return ItemBox(
-          photoID: Recipes[index].photoID,
-          foodName: Recipes[index].foodName,
-        );
+        return ItemBox(Recipes[index]);
       }
-      
     );
   }
 }

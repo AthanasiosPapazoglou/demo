@@ -1,14 +1,13 @@
 
 
 import 'package:flutter/material.dart';
+import 'item_model.dart';
 
 class ItemBox extends StatelessWidget {
 
-  final String photoID;
-  final String foodName;
-
-  ItemBox({ required this.photoID, required this.foodName,});
-
+  final ItemModel item;
+  
+  ItemBox(this.item);
 
   @override
   Widget build(BuildContext context) {
@@ -18,11 +17,11 @@ class ItemBox extends StatelessWidget {
         child: Column(
           children: [
             Image(
-                image: AssetImage(photoID),
+                image: AssetImage(item.photoID),
               ),
             ListTile(
               title: Text(
-                foodName,
+                item.foodName,
               ),
               trailing: Icon(Icons.arrow_downward_rounded),
             )
