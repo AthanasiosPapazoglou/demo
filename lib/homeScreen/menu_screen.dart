@@ -4,6 +4,13 @@ import 'menu_select_button.dart';
 import 'package:demo/meat_screen.dart';
 import 'package:demo/vegeterian_screen.dart';
 import 'package:demo/vegan_screen.dart';
+import 'package:demo/item_model.dart';
+
+final List<ItemModel> Meat = [
+  ItemModel(photoID: 'images/Meat.jpg', foodName: 'Meat Recipe 1'),
+  ItemModel(photoID: 'images/Vegeterian.jpg', foodName: 'Meat Recipe 2'),
+  ItemModel(photoID: 'images/Vegan.jpg', foodName: 'Meat Recipe 3'),
+];
 
 class MenuScreen extends StatelessWidget {
 
