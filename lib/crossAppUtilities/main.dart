@@ -1,8 +1,10 @@
+import 'package:demo/item_screen.dart';
 import 'package:flutter/material.dart';
 import '../homeScreen/menu_screen.dart';
 import 'package:demo/meat_screen.dart';
 import 'package:demo/vegan_screen.dart';
 import 'package:demo/vegeterian_screen.dart';
+import 'package:demo/item_screen.dart';
 
 main() => runApp(DemoApp());
 
@@ -18,7 +20,6 @@ class DemoApp extends StatelessWidget {
         MeatScreen.pageID: (context) => MeatScreen(),
         VegeterianScreen.pageID: (context) => VegeterianScreen(),
         VeganScreen.pageID: (context) => VeganScreen(), 
-        
       },
     );
   }

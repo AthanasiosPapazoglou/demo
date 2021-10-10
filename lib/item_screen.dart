@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class SelectedItemPage extends StatelessWidget {
+
+  static const String pageID = 'item_screen';
+
   final String photoID;
   final String foodName;
 

@@ -14,6 +14,7 @@ class ItemBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
+        print('click listened');
         SelectedItemPage(photoID: item.photoID, foodName: item.foodName);
       },
       child: Container(
