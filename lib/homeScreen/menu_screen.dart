@@ -4,6 +4,8 @@ import 'menu_select_button.dart';
 import 'package:demo/meat_screen.dart';
 import 'package:demo/vegeterian_screen.dart';
 import 'package:demo/vegan_screen.dart';
+import 'package:demo/item_model.dart';
+
 
 class MenuScreen extends StatelessWidget {
 
@@ -24,7 +26,7 @@ class MenuScreen extends StatelessWidget {
                 right: 60,
               ),
               child: Image(
-                image: AssetImage('lib/homeScreen/images/logo.png'),
+                image: AssetImage('images/logo.png'),
               ),
             ),
             MenuSelectionButton(

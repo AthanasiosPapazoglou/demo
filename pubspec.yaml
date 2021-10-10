@@ -35,4 +35,4 @@ flutter:
   uses-material-design: true
 
   assets:
-    - lib/homeScreen/images/
+    - images/

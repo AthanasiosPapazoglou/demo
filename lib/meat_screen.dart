@@ -1,4 +1,8 @@
+
 import 'package:flutter/material.dart';
+import 'package:demo/menu_listView.dart';
+import 'menu_files.dart';
+
 
 class MeatScreen extends StatelessWidget {
   
@@ -8,14 +12,7 @@ class MeatScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Center(
-        child: Container(
-          child: Text(
-            'Welcome to meat menu',
-            style: TextStyle(fontSize: 50,
-            color: Colors.green),),
-        ),
-      ),
+      body: menuListView(Meat)
     );
   }
 }

@@ -22,3 +22,6 @@ class DemoApp extends StatelessWidget {
     );
   }
 }
+
+//Για τις οθονες, ενα listview με παιδια custom widgets οπου εικονα και απο κατω ενα tapable listtile
+//Expansion Panel
