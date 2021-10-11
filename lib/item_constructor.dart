@@ -15,7 +15,11 @@ class ItemBox extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         print('click listened');
-        SelectedItemPage(photoID: item.photoID, foodName: item.foodName);
+        Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => SelectedItemPage(photoID: item.photoID, foodName: item.foodName)),
+  );
+        //SelectedItemPage(photoID: item.photoID, foodName: item.foodName);
       },
       child: Container(
         padding: EdgeInsets.all(15),

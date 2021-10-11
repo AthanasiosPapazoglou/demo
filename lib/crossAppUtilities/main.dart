@@ -19,7 +19,7 @@ class DemoApp extends StatelessWidget {
         MenuScreen.pageID: (context) => MenuScreen(),
         MeatScreen.pageID: (context) => MeatScreen(),
         VegeterianScreen.pageID: (context) => VegeterianScreen(),
-        VeganScreen.pageID: (context) => VeganScreen(), 
+        VeganScreen.pageID: (context) => VeganScreen(),
       },
     );
   }
