@@ -26,42 +26,54 @@ class SelectedItemPage extends StatelessWidget {
                 image: AssetImage(photoID),
               ),
             ),
-            Text(
-              foodName,
-              style: TextStyle(fontSize: 20),
+            Padding(
+              padding: EdgeInsets.only(bottom: 10),
+              child: Text(
+                foodName,
+                style: TextStyle(fontSize: 20),
+              ),
             ),
-            Row(
-              children: [
-                Expanded(
-                  flex: 1,
-                  child: Column(
+            Expanded(
+              child: Row(
+                children: [
+                  Column(
                     // ignore: prefer_const_literals_to_create_immutables
                     children: [
                       Padding(
-                        padding: EdgeInsets.only(top: 55, left: 15, right: 20),
+                        padding: EdgeInsets.only(top: 50, left: 15, right: 15),
                         child: Image(
+                          width: 70,
+                          height: 70,
                           image: AssetImage('images/web_Icon.png'),
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.only(top: 75, left: 15, right: 20, bottom: 20),
+                        padding: EdgeInsets.only(top: 70, left: 15, right: 15),
                         child: Image(
+                          width: 70,
+                          height: 70,
                           image: AssetImage('images/yt_Icon.png'),
                         ),
                       ),
                     ],
                   ),
-                ),
-                Expanded(
-                  flex: 3,
-                  child: SingleChildScrollView(
-                    child: Text(
-                      'Something Long enough so that we definetely make sureSomething Long enough so that we definetely make sureSomething Long enough so that we definetely make sureSomething Long enough so that we definetely make sure that this text is scrollable and that our UI Design is implemented correctly.',
-                      style: TextStyle(fontSize: 20),
+                  Expanded(
+                    flex: 3,
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.vertical,
+                      child: Text(
+                        'Something Long enough so that we definetely make sure that this text is scrollable and that our UI Design is implemented correctly.' +
+                            'Something Long enough so that we definetely make sure that this text is scrollable and that our UI Design is implemented correctly.' +
+                            'Something Long enough so that we definetely make sure that this text is scrollable and that our UI Design is implemented correctly.' +
+                            'Something Long enough so that we definetely make sure that this text is scrollable and that our UI Design is implemented correctly.' +
+                            'Something Long enough so that we definetely make sure that this text is scrollable and that our UI Design is implemented correctly.' +
+                            'Something Long enough so that we definetely make sure that this text is scrollable and that our UI Design is implemented correctly.',
+                        style: TextStyle(fontSize: 20),
+                      ),
                     ),
-                  ),
-                )
-              ],
+                  )
+                ],
+              ),
             ),
           ],
         ),
