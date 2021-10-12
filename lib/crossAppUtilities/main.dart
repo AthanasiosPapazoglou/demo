@@ -6,7 +6,27 @@ import 'package:demo/vegan_screen.dart';
 import 'package:demo/vegeterian_screen.dart';
 import 'package:demo/item_screen.dart';
 
-main() => runApp(DemoApp());
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_database/firebase_database.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
+Future<String> getTextInformation(String databasePath) async {
+  FirebaseDatabase database = FirebaseDatabase.instance;
+  DatabaseReference _ref =
+      database.reference().child(databasePath);
+  String result = await _ref.once().then((value) => value.value);
+  print(result);
+  return result;
+}
+
+//"menu_options/menu_option_1/title"
+
+Future<void> main() async{ 
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  print('Firebase and binding initialised');
+  runApp(DemoApp());
+}
 
 class DemoApp extends StatelessWidget {
 
@@ -25,5 +45,7 @@ class DemoApp extends StatelessWidget {
   }
 }
 
-//Για τις οθονες, ενα listview με παιδια custom widgets οπου εικονα και απο κατω ενα tapable listtile
-//Expansion Panel
+
+
+//Einai real time opote me ta paths (eite katefthian eite mesa apo katalilo url pou exei ws paidi to route)
+//prepei authenticate ton user, ta credentials
