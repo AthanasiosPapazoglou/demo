@@ -5,14 +5,17 @@ import 'package:demo/meat_screen.dart';
 import 'package:demo/vegeterian_screen.dart';
 import 'package:demo/vegan_screen.dart';
 import 'package:demo/item_model.dart';
-
+import 'package:demo/login.dart';
+import 'package:demo/fetch_Info.dart';
 
 class MenuScreen extends StatelessWidget {
 
   static const String pageID = 'menu_screen';
+  final Login login = Login();
 
   @override
   Widget build(BuildContext context) {
+    print(auth.currentUser?.uid);
     return Scaffold(
       backgroundColor: Colors.orange[50],
       body: SafeArea(
@@ -30,7 +33,7 @@ class MenuScreen extends StatelessWidget {
               ),
             ),
             MenuSelectionButton(
-              buttonText: 'Meat Based Menu ',
+              buttonText: 'Meat Based Menu',
               providedIcon: Icons.fastfood_rounded,
               iconColor: Colors.brown,
               cardColor: Colors.brown.shade100,
@@ -50,6 +53,10 @@ class MenuScreen extends StatelessWidget {
               cardColor: Colors.green.shade100,
               pageID: VeganScreen.pageID,
             ),
+          TextButton(onPressed: () async {
+              await login.doLogin();
+          }, 
+        child: Text('Log In Database'))
           ],
         ),
       ),
