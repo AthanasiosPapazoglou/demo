@@ -45,18 +45,18 @@ class SelectedItemPage extends StatelessWidget {
                     // ignore: prefer_const_literals_to_create_immutables
                     children: [
                       Padding(
-                        padding: EdgeInsets.only(top: 40, left: 15, right: 15),
+                        padding: EdgeInsets.only(top: 35, left: 15, right: 15),
                         child: Image(
-                          width: 50,
-                          height: 50,
+                          width: 40,
+                          height: 40,
                           image: AssetImage('images/web_Icon.png'),
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.only(top: 70, left: 15, right: 15),
+                        padding: EdgeInsets.only(top: 60, left: 15, right: 15),
                         child: Image(
-                          width: 50,
-                          height: 50,
+                          width: 40,
+                          height: 40,
                           image: AssetImage('images/yt_Icon.png'),
                         ),
                       ),
