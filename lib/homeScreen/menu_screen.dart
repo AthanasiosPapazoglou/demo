@@ -6,6 +6,7 @@ import 'package:demo/vegeterian_screen.dart';
 import 'package:demo/vegan_screen.dart';
 import 'package:demo/item_model.dart';
 import 'package:demo/login.dart';
+import 'package:demo/fetch_Info.dart';
 
 class MenuScreen extends StatelessWidget {
 
@@ -32,7 +33,7 @@ class MenuScreen extends StatelessWidget {
               ),
             ),
             MenuSelectionButton(
-              buttonText: 'Meat Based Menu ',
+              buttonText: 'Meat Based Menu',
               providedIcon: Icons.fastfood_rounded,
               iconColor: Colors.brown,
               cardColor: Colors.brown.shade100,
