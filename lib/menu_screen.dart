@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../crossAppUtilities/constants.dart';
+import 'constants.dart';
 import 'menu_select_button.dart';
 import 'package:demo/meat_screen.dart';
 import 'package:demo/vegeterian_screen.dart';
@@ -11,11 +11,11 @@ import 'package:demo/fetch_Info.dart';
 class MenuScreen extends StatelessWidget {
 
   static const String pageID = 'menu_screen';
-  final Login login = Login();
+  //final Login login = Login();
 
   @override
   Widget build(BuildContext context) {
-    print(auth.currentUser?.uid);
+    //print(auth.currentUser?.uid);
     return Scaffold(
       backgroundColor: Colors.orange[50],
       body: SafeArea(
@@ -53,10 +53,6 @@ class MenuScreen extends StatelessWidget {
               cardColor: Colors.green.shade100,
               pageID: VeganScreen.pageID,
             ),
-          TextButton(onPressed: () async {
-              await login.doLogin();
-          }, 
-        child: Text('Log In Database'))
           ],
         ),
       ),

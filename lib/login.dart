@@ -4,13 +4,14 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 
-final auth = FirebaseAuth.instance;
+//final auth = FirebaseAuth.instance;
 
 class Login {
-  final email = "candidate@smartupweb.com";
-  final pass = "smartup";
+  final FirebaseAuth auth;
+  final String email;
+  final String pass;
 
-  Login();
+  Login({required this.auth ,required this.email, required this.pass});
 
   Future doLogin() async {
     try {

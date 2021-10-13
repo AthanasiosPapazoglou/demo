@@ -1,6 +1,7 @@
 import 'package:demo/item_screen.dart';
+import 'package:demo/login_screen.dart';
 import 'package:flutter/material.dart';
-import '../homeScreen/menu_screen.dart';
+import '../menu_screen.dart';
 import 'package:demo/meat_screen.dart';
 import 'package:demo/vegan_screen.dart';
 import 'package:demo/vegeterian_screen.dart';
@@ -26,8 +27,9 @@ class DemoApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: MenuScreen.pageID, 
+      initialRoute: LoginScreen.pageID, 
       routes: {
+        LoginScreen.pageID: (context) => LoginScreen(),
         MenuScreen.pageID: (context) => MenuScreen(),
         MeatScreen.pageID: (context) => MeatScreen(),
         VegeterianScreen.pageID: (context) => VegeterianScreen(),

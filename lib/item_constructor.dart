@@ -27,7 +27,8 @@ class ItemBox extends StatelessWidget {
           child: Column(
             children: [
               Image(
-                  image: AssetImage(item.photoID),
+                  image: AssetImage(item.photoID), 
+                  //it: BoxFi
                 ),
               ListTile(
                 title: Text(
