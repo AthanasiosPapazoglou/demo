@@ -1,18 +1,18 @@
-import 'package:demo/item_screen.dart';
+
 import 'package:demo/login_screen.dart';
 import 'package:flutter/material.dart';
 import '../menu_screen.dart';
 import 'package:demo/meat_screen.dart';
 import 'package:demo/vegan_screen.dart';
 import 'package:demo/vegeterian_screen.dart';
-import 'package:demo/item_screen.dart';
+
 
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_database/firebase_database.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+
 
 
 //"menu_options/menu_option_1/title"
+
 
 Future<void> main() async{ 
   WidgetsFlutterBinding.ensureInitialized();
