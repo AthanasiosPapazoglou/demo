@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'menu_select_button.dart';
-import 'package:demo/meat_screen.dart';
-import 'package:demo/vegeterian_screen.dart';
-import 'package:demo/vegan_screen.dart';
+import '../UIbuilders/menu_select_button.dart';
+import 'package:demo/screens/meat_screen.dart';
+import 'package:demo/screens/vegeterian_screen.dart';
+import 'package:demo/screens/vegan_screen.dart';
 
 class MenuScreen extends StatelessWidget {
 

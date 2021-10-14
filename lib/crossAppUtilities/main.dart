@@ -1,10 +1,10 @@
 
-import 'package:demo/login_screen.dart';
+import 'package:demo/screens/login_screen.dart';
 import 'package:flutter/material.dart';
-import '../menu_screen.dart';
-import 'package:demo/meat_screen.dart';
-import 'package:demo/vegan_screen.dart';
-import 'package:demo/vegeterian_screen.dart';
+import '../screens/menu_screen.dart';
+import 'package:demo/screens/meat_screen.dart';
+import 'package:demo/screens/vegan_screen.dart';
+import 'package:demo/screens/vegeterian_screen.dart';
 
 
 import 'package:firebase_core/firebase_core.dart';

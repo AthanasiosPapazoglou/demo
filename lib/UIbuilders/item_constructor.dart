@@ -1,8 +1,8 @@
 
 
 import 'package:flutter/material.dart';
-import 'item_model.dart';
-import 'item_screen.dart';
+import '../item_model.dart';
+import '../screens/item_screen.dart';
 
 class ItemBox extends StatelessWidget {
 

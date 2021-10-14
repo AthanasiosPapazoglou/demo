@@ -21,9 +21,9 @@ class Login {
       );
       print(auth.currentUser?.uid);
       return (auth.currentUser);
-      //return "Signed in";
+
     } on FirebaseAuthException catch (e) {
-      print("Error");
+      print(e);
     }
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'item_model.dart';
+import '../item_model.dart';
 
 
 final List<ItemModel> Meat = [

@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:demo/menu_listView.dart';
-import 'menu_files.dart';
+import 'package:demo/functionality/menu_listView.dart';
+import '../crossAppUtilities/menu_files.dart';
 
 
 class MeatScreen extends StatelessWidget {

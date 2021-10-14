@@ -1,10 +1,10 @@
 // ignore_for_file: file_names, prefer_const_constructors
 
-import 'package:demo/login_button.dart';
+import 'package:demo/UIbuilders/login_button.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'login.dart';
-import 'menu_screen.dart';
+import '../login.dart';
+import '/screens/menu_screen.dart';
 //import 'login_button.dart';
 //import 'package:modal_progress_hud/modal_progress_hud.dart';
 

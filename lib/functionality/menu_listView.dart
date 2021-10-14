@@ -1,8 +1,8 @@
 // ignore_for_file: file_names, prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'item_model.dart';
-import 'item_constructor.dart';
+import '../item_model.dart';
+import '../UIbuilders/item_constructor.dart';
 
 class menuListView extends StatelessWidget {
   final List<ItemModel> Recipes;
