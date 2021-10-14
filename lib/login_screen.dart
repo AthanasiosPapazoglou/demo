@@ -1,9 +1,7 @@
 // ignore_for_file: file_names, prefer_const_constructors
 
 import 'package:demo/login_button.dart';
-import 'package:demo/login_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'login.dart';
 import 'menu_screen.dart';
