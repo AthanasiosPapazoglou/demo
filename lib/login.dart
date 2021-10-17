@@ -1,32 +1,37 @@
 import 'package:flutter/material.dart';
-
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 
-//final auth = FirebaseAuth.instance;
+final auth = FirebaseAuth.instance;
 
 class Login {
-  final FirebaseAuth auth;
+  
+  static bool isLoggedIn = false;
   final String email;
-  final String pass;
+  final String password;
 
-  Login({required this.auth ,required this.email, required this.pass});
+  Login({required this.email, required this.password});
 
-  Future doLogin() async {
+  Future loginViaMail() async {
     try {
       await auth.signInWithEmailAndPassword(
         email: email,
-        password: pass,
+        password: password,
       );
+      isLoggedIn = true;
       print(auth.currentUser?.uid);
-      return (auth.currentUser);
+      return isLoggedIn;
 
     } on FirebaseAuthException catch (e) {
       print(e);
+      return false;
     }
   }
 }
+
+//Future loginViaToken
 
 //"candidate@smartupweb.com"
 //"smartup"

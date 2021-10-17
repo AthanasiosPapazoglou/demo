@@ -9,6 +9,7 @@ class MenuScreen extends StatelessWidget {
   static const String pageID = 'menu_screen';
   //final Login login = Login();
 
+
   @override
   Widget build(BuildContext context) {
     //print(auth.currentUser?.uid);
@@ -29,7 +30,7 @@ class MenuScreen extends StatelessWidget {
               ),
             ),
             MenuSelectionButton(
-              buttonText: 'Meat Based Menu',
+              buttonText: "Meat Screen",
               providedIcon: Icons.fastfood_rounded,
               iconColor: Colors.brown,
               cardColor: Colors.brown.shade100,
@@ -55,3 +56,5 @@ class MenuScreen extends StatelessWidget {
     );
   }
 }
+
+//"menu_options/menu_option_1/title"

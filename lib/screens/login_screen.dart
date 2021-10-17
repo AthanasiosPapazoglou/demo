@@ -10,7 +10,7 @@ import '/screens/menu_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   static const String pageID = 'login_screen';
-  final auth = FirebaseAuth.instance;
+  bool navEligible = false;
   String email = '';
   String password = '';
 
@@ -67,9 +67,9 @@ class LoginScreen extends StatelessWidget {
               colour: Colors.teal,
               buttonTitle: 'Log In',
               buttonFunctionality: () async {
-                Login login = Login(auth: auth, email: email, pass: password);
-                await login.doLogin();
-                Navigator.pushNamed(context, MenuScreen.pageID);
+                Login login = Login(email: email, password: password);
+                navEligible = await login.loginViaMail();
+                navEligible ? Navigator.pushNamed(context, MenuScreen.pageID) : print('Invalid Credentials');
               },
             ),
           ],
