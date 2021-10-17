@@ -13,6 +13,7 @@ class Login {
   final String password;
 
   Login({required this.email, required this.password});
+  Login.disconnect({this.email='_',this.password='_'});
 
   Future loginViaMail() async {
     try {
@@ -29,9 +30,21 @@ class Login {
       return false;
     }
   }
+
+   Future<void> doLogout() async {
+    try {
+      await auth.signOut();
+      isLoggedIn = false;
+    } on FirebaseAuthException catch (e) {
+      return;
+    }
+  }
 }
 
-//Future loginViaToken
+
+
+
+
 
 //"candidate@smartupweb.com"
 //"smartup"

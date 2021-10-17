@@ -3,6 +3,8 @@ import '../UIbuilders/menu_select_button.dart';
 import 'package:demo/screens/meat_screen.dart';
 import 'package:demo/screens/vegeterian_screen.dart';
 import 'package:demo/screens/vegan_screen.dart';
+import 'package:demo/login.dart';
+import 'login_screen.dart';
 
 class MenuScreen extends StatelessWidget {
 
@@ -50,6 +52,13 @@ class MenuScreen extends StatelessWidget {
               cardColor: Colors.green.shade100,
               pageID: VeganScreen.pageID,
             ),
+            FloatingActionButton(
+              onPressed: () {
+                Login connectionState = Login.disconnect();
+                connectionState.doLogout();
+                Navigator.pushNamed(context, LoginScreen.pageID);
+              },
+            )
           ],
         ),
       ),
