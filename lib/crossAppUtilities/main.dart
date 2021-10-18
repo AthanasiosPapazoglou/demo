@@ -1,10 +1,9 @@
 
+import 'package:demo/providers/information.dart';
 import 'package:demo/screens/login_screen.dart';
+import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
-import '../screens/menu_screen.dart';
-import 'package:demo/screens/meat_screen.dart';
-import 'package:demo/screens/vegan_screen.dart';
-import 'package:demo/screens/vegeterian_screen.dart';
+import '../screens/menu_select_screen.dart';
 import 'package:demo/login.dart';
 
 
@@ -24,16 +23,16 @@ class DemoApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return ChangeNotifierProvider(
+      create: (ctx) => Information(context),
+      child: MaterialApp(
       debugShowCheckedModeBanner: false,
       initialRoute: launchStateScreen(context), 
       routes: {
         LoginScreen.pageID: (context) => LoginScreen(),
-        MenuScreen.pageID: (context) => MenuScreen(),
-        MeatScreen.pageID: (context) => MeatScreen(),
-        VegeterianScreen.pageID: (context) => VegeterianScreen(),
-        VeganScreen.pageID: (context) => VeganScreen(),
+        MenuSelectionScreen.pageID: (context) => MenuSelectionScreen(),
       },
+      ),
     );
   }
 }
@@ -43,7 +42,7 @@ String launchStateScreen (BuildContext context) {
   if (auth.currentUser?.uid == null) {
     return LoginScreen.pageID;
   } else {
-    return MenuScreen.pageID;
+    return MenuSelectionScreen.pageID;
   }
 }
 
