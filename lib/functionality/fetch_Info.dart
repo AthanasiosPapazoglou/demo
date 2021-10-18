@@ -1,7 +1,7 @@
+// ignore_for_file: file_names, prefer_const_constructors
 
-import 'package:flutter/material.dart';
 
-import 'package:firebase_core/firebase_core.dart';
+
 import 'package:firebase_database/firebase_database.dart';
 
 
@@ -13,3 +13,4 @@ Future<String> getInformation(String databasePath) async {
   print(result);
   return result;
 }
+

@@ -1,33 +1,34 @@
-import 'package:demo/item_screen.dart';
+
+import 'package:demo/screens/login_screen.dart';
 import 'package:flutter/material.dart';
-import '../homeScreen/menu_screen.dart';
-import 'package:demo/meat_screen.dart';
-import 'package:demo/vegan_screen.dart';
-import 'package:demo/vegeterian_screen.dart';
-import 'package:demo/item_screen.dart';
+import '../screens/menu_screen.dart';
+import 'package:demo/screens/meat_screen.dart';
+import 'package:demo/screens/vegan_screen.dart';
+import 'package:demo/screens/vegeterian_screen.dart';
+import 'package:demo/login.dart';
+
 
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_database/firebase_database.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 
-
-//"menu_options/menu_option_1/title"
-
+//Main Initialises Binding and Firebase Connection
 Future<void> main() async{ 
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   print('Firebase and binding initialised');
+  print(auth.currentUser?.uid);
   runApp(DemoApp());
 }
 
+//We are using Navigation Routes in this App
 class DemoApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: MenuScreen.pageID, 
+      initialRoute: launchStateScreen(context), 
       routes: {
+        LoginScreen.pageID: (context) => LoginScreen(),
         MenuScreen.pageID: (context) => MenuScreen(),
         MeatScreen.pageID: (context) => MeatScreen(),
         VegeterianScreen.pageID: (context) => VegeterianScreen(),
@@ -37,6 +38,13 @@ class DemoApp extends StatelessWidget {
   }
 }
 
+//This function returns the launch screen ID based on weather or not a valid cached connection token is establishing a connection with Firebase RTDB 
+String launchStateScreen (BuildContext context) {
+  if (auth.currentUser?.uid == null) {
+    return LoginScreen.pageID;
+  } else {
+    return MenuScreen.pageID;
+  }
+}
 
 
-//We need to implement proper use of providers or steambuild to fix the state and async issue

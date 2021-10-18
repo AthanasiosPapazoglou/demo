@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
-import '../crossAppUtilities/constants.dart';
-import 'menu_select_button.dart';
-import 'package:demo/meat_screen.dart';
-import 'package:demo/vegeterian_screen.dart';
-import 'package:demo/vegan_screen.dart';
-import 'package:demo/item_model.dart';
+import '../UIbuilders/menu_select_button.dart';
+import 'package:demo/screens/meat_screen.dart';
+import 'package:demo/screens/vegeterian_screen.dart';
+import 'package:demo/screens/vegan_screen.dart';
 import 'package:demo/login.dart';
-import 'package:demo/fetch_Info.dart';
+import 'login_screen.dart';
 
 class MenuScreen extends StatelessWidget {
 
   static const String pageID = 'menu_screen';
-  final Login login = Login();
+  //final Login login = Login();
+
 
   @override
   Widget build(BuildContext context) {
-    print(auth.currentUser?.uid);
+    //print(auth.currentUser?.uid);
     return Scaffold(
       backgroundColor: Colors.orange[50],
       body: SafeArea(
@@ -33,7 +32,7 @@ class MenuScreen extends StatelessWidget {
               ),
             ),
             MenuSelectionButton(
-              buttonText: 'Meat Based Menu',
+              buttonText: "Meat Screen",
               providedIcon: Icons.fastfood_rounded,
               iconColor: Colors.brown,
               cardColor: Colors.brown.shade100,
@@ -53,13 +52,18 @@ class MenuScreen extends StatelessWidget {
               cardColor: Colors.green.shade100,
               pageID: VeganScreen.pageID,
             ),
-          TextButton(onPressed: () async {
-              await login.doLogin();
-          }, 
-        child: Text('Log In Database'))
+            FloatingActionButton(
+              onPressed: () {
+                Login connectionState = Login.disconnect();
+                connectionState.doLogout();
+                Navigator.pushNamed(context, LoginScreen.pageID);
+              },
+            )
           ],
         ),
       ),
     );
   }
 }
+
+//"menu_options/menu_option_1/title"
