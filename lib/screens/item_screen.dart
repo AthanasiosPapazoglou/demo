@@ -5,20 +5,17 @@ import 'package:flutter/material.dart';
 class SelectedItemPage extends StatelessWidget {
   static const String pageID = 'item_screen';
 
-  final String photoID;
-  final String foodName;
+  final String path;
+  final int index;
 
-  SelectedItemPage({
-    required this.photoID,
-    required this.foodName,
-  });
+  SelectedItemPage({required this.path ,required this.index});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blueGrey,
-        title: Text('$foodName'),
+        title: Text('sample'),
       // ignore: prefer_const_literals_to_create_immutables
       ),
       backgroundColor: Colors.white,
@@ -27,14 +24,14 @@ class SelectedItemPage extends StatelessWidget {
           children: [
             Padding(
               padding: EdgeInsets.only(top: 10, bottom: 10),
-              child: Image(
-                image: AssetImage(photoID),
-              ),
+              // child: Image(
+              //   image: AssetImage(photoID),
+              // ),
             ),
             Padding(
               padding: EdgeInsets.only(bottom: 10),
               child: Text(
-                foodName,
+                'sample',
                 style: TextStyle(fontSize: 20),
               ),
             ),

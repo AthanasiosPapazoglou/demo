@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:demo/Firebase/calls.dart';
 import 'package:demo/models/item_model.dart';
 
-class Menus extends ChangeNotifier {
+class Information extends ChangeNotifier {
   //constructor
-  Menus(this.context) {
+  Information(this.context) {
     setMenusList();
   }
 
