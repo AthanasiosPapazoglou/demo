@@ -2,10 +2,8 @@
 import 'package:demo/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import '../screens/menu_screen.dart';
-import 'package:demo/screens/meat_screen.dart';
-import 'package:demo/screens/vegan_screen.dart';
-import 'package:demo/screens/vegeterian_screen.dart';
-import 'package:demo/login.dart';
+
+import 'package:demo/Firebase/login.dart';
 
 
 import 'package:firebase_core/firebase_core.dart';
@@ -30,9 +28,6 @@ class DemoApp extends StatelessWidget {
       routes: {
         LoginScreen.pageID: (context) => LoginScreen(),
         MenuScreen.pageID: (context) => MenuScreen(),
-        MeatScreen.pageID: (context) => MeatScreen(),
-        VegeterianScreen.pageID: (context) => VegeterianScreen(),
-        VeganScreen.pageID: (context) => VeganScreen(),
       },
     );
   }

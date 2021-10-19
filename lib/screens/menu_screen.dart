@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import '../UIbuilders/menu_select_button.dart';
-import 'package:demo/screens/meat_screen.dart';
-import 'package:demo/screens/vegeterian_screen.dart';
-import 'package:demo/screens/vegan_screen.dart';
-import 'package:demo/login.dart';
+import 'package:demo/firebase/login.dart';
 import 'login_screen.dart';
 
 class MenuScreen extends StatelessWidget {
@@ -31,27 +27,8 @@ class MenuScreen extends StatelessWidget {
                 image: AssetImage('images/logo.png'),
               ),
             ),
-            MenuSelectionButton(
-              buttonText: "Meat Screen",
-              providedIcon: Icons.fastfood_rounded,
-              iconColor: Colors.brown,
-              cardColor: Colors.brown.shade100,
-              pageID: MeatScreen.pageID,
-            ),
-            MenuSelectionButton(
-              buttonText: 'Vegeterian Menu ',
-              providedIcon: Icons.favorite_rounded,
-              iconColor: Colors.red,
-              cardColor: Colors.red.shade100,
-              pageID: VegeterianScreen.pageID,
-            ),
-            MenuSelectionButton(
-              buttonText: 'Vegan Menu ',
-              providedIcon: Icons.local_florist_outlined,
-              iconColor: Colors.green,
-              cardColor: Colors.green.shade100,
-              pageID: VeganScreen.pageID,
-            ),
+            
+            
             FloatingActionButton(
               onPressed: () {
                 Login connectionState = Login.disconnect();
