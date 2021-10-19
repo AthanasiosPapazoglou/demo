@@ -1,6 +1,8 @@
+import 'package:demo/Widgets/menu_buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:demo/firebase/login.dart';
 import 'login_screen.dart';
+import 'package:demo/Widgets/menu_buttons.dart';
 
 class MenuScreen extends StatelessWidget {
 
@@ -27,8 +29,7 @@ class MenuScreen extends StatelessWidget {
                 image: AssetImage('images/logo.png'),
               ),
             ),
-            
-            
+            MenuButtonsColumn(),
             FloatingActionButton(
               onPressed: () {
                 Login connectionState = Login.disconnect();
