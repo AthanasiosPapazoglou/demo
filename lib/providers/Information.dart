@@ -15,7 +15,7 @@ class Information extends ChangeNotifier {
 
   Map<String, List<Item>> _menuAndItemsList = Map();
 
-  //info about food lists (key is the path of a specific menu value is the list of the foods of that menu)
+  //info about food lists (key is the path of a specific menu, value is the list of the foods of that menu)
   Map<String, List<Item>> get menuAndItemsList {
     return {..._menuAndItemsList};
   }

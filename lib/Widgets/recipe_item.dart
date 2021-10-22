@@ -76,8 +76,9 @@ class _RecipeItemCreatorState extends State<RecipeItemCreator> {
                     );
                   },
                   style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.teal),
-                      foregroundColor: MaterialStateProperty.all(Colors.white)),
+                    backgroundColor: MaterialStateProperty.all(Colors.teal),
+                    foregroundColor: MaterialStateProperty.all(Colors.white),
+                  ),
                   child: const Text("Φτιάξτε την συνταγή"),
                 )
               ]),

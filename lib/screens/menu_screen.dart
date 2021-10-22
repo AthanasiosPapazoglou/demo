@@ -5,16 +5,28 @@ import 'login_screen.dart';
 import 'package:demo/Widgets/menu_buttons.dart';
 
 class MenuScreen extends StatelessWidget {
-
   static const String pageID = 'menu_screen';
   //final Login login = Login();
-
 
   @override
   Widget build(BuildContext context) {
     //print(auth.currentUser?.uid);
     return Scaffold(
       backgroundColor: Colors.orange[50],
+      appBar: AppBar(
+        title: Text('Menu Selection'),
+        actions: [
+          GestureDetector(
+            onTap: () {
+              Login connectionState = Login.disconnect();
+              connectionState.doLogout();
+              Navigator.pushNamed(context, LoginScreen.pageID);
+            },
+            child: Icon(Icons.logout),
+          ),
+          SizedBox(width: 15)
+        ],
+      ),
       body: SafeArea(
         child: Column(
           children: <Widget>[
@@ -30,13 +42,6 @@ class MenuScreen extends StatelessWidget {
               ),
             ),
             MenuButtonsColumn(),
-            FloatingActionButton(
-              onPressed: () {
-                Login connectionState = Login.disconnect();
-                connectionState.doLogout();
-                Navigator.pushNamed(context, LoginScreen.pageID);
-              },
-            )
           ],
         ),
       ),

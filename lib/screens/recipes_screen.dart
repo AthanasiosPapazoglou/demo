@@ -10,7 +10,8 @@ class RecipesList extends StatelessWidget {
   final int menuNum;
   final String menuPath;
 
-  RecipesList({required this.menuNum, required this.menuPath});
+   const RecipesList({ required this.menuNum, required this.menuPath});
+      
 
   @override
   Widget build(BuildContext context) {
