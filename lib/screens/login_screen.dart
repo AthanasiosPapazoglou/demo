@@ -5,8 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../Firebase/login.dart';
 import '/screens/menu_screen.dart';
-//import 'login_button.dart';
-//import 'package:modal_progress_hud/modal_progress_hud.dart';
+
 
 class LoginScreen extends StatelessWidget {
   static const String pageID = 'login_screen';
@@ -18,9 +17,6 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      //body: ModalProgressHUD(
-      //inAsyncCall: true,
-      // child:
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(

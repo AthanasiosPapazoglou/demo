@@ -5,9 +5,9 @@ import 'package:provider/provider.dart';
 import 'package:demo/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import '../screens/menu_screen.dart';
+import 'package:demo/screens/recipes_screen.dart';
 
 import 'package:demo/Firebase/login.dart';
-import 'package:firebase_core/firebase_core.dart';
 
 //Main Initialises Binding and Firebase Connection
 Future<void> main() async{ 
@@ -27,6 +27,9 @@ class DemoApp extends StatelessWidget {
       create: (ctx) => Information(context),
       child: MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.grey
+      ),
       initialRoute: launchStateScreen(context), 
       routes: {
         LoginScreen.pageID: (context) => LoginScreen(),

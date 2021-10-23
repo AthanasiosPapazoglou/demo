@@ -18,8 +18,7 @@ class _MenuButtonsColumnState extends State<MenuButtonsColumn> {
         ? const Center(child: CircularProgressIndicator())
         : Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: menuButtons(context) 
-            );
+            children: menuButtons(context));
   }
 
   List<Widget> menuButtons(BuildContext context) {
